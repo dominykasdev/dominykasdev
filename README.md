@@ -1,2 +1,0 @@
-# dominykasdev
-Created with CodeSandbox

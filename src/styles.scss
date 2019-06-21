@@ -1,0 +1,148 @@
+$colours: (#06d6a0, #f77f00, #2ec4b6, #e71d36, #ff9f1c);
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  background: #31b7d7;
+  transition: all .7s ease-in-out;
+}
+
+.animate {
+  transition: all .7s ease-in-out;
+}
+
+.hidden{
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@function randCol() {
+  $rIndex: random(length($colours));
+  $rCol: nth($colours, $rIndex);
+  @return $rCol;
+}
+
+#container {
+  padding: 0 2%;
+}
+
+.container {
+  position: absolute;
+  background: #31b7d7;
+  background: -webkit-linear-gradient(60deg, randCol(), randCol());
+  background: linear-gradient(60deg, randCol(), randCol());
+  background-size: 150% 150%;
+  animation: gradient 12s ease-in-out infinite alternate;
+}
+
+#header {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 10%;
+  //background: #333;
+  //border: 0px 0px 3px 0px white dashed;
+}
+
+#header .button{
+  display: inline-flex;
+  padding: 10px 20px;
+  background: #123456;
+  border: 3px white dashed;
+}
+
+.blueScreen {
+  position: absolute;
+  background-color: #0078d7;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15vh 15vw;
+  width: 70vw;
+  height: 70vh;
+}
+
+.blueScreen .face {
+  //font-size: 120px;
+  font-size: 9em;
+  line-height: 0;
+}
+
+.blueScreen p {
+  font-size: 14px;
+}
+
+.blueScreen p.smallText {
+  font-size: 12px;
+}
+
+.blueScreen .bottom p {
+  display: inline-block;
+  float: left;
+  width: 70%
+}
+
+.blueScreen p.bottom {
+  margin-top: 70px;
+}
+
+.blueScreen .bottom img {
+  float: left;
+  width: 150px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
+/*@keyframes bg-anim {
+  0% {
+    //background: -webkit-linear-gradient(120deg, randCol(), randCol());
+    //background: linear-gradient(60deg, randCol(), randCol());
+    background: -webkit-linear-gradient(60deg);
+    background: linear-gradient(60deg);
+    transform: translate(0% 0%);
+  }
+
+  50% {
+    //background: -webkit-linear-gradient(180deg, randCol(), randCol());
+    //background: linear-gradient(180deg, randCol(), randCol());
+    background: -webkit-linear-gradient(180deg);
+    background: linear-gradient(180deg);
+    transform: translate(50% 50%);
+  }
+
+  100% {
+    background: -webkit-linear-gradient(120deg, randCol(), randCol());
+    background: linear-gradient(220deg, randCol(), randCol());
+    //background: -webkit-linear-gradient(220deg);
+    //background: linear-gradient(220deg);
+    transform: translate(150% 150%);
+  }
+}*/
+
+/*@keyframes gradient {
+  0% {
+    background: randCol();
+  }
+  50% {
+    background: randCol();
+  }
+  100% {
+    background: randCol();
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background: #06d6a0;
+  }
+  50% {
+    background: #2ec4b6;
+  }
+  100% {
+    background: #e71d36;
+  }
+}*/
